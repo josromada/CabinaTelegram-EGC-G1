@@ -1,5 +1,5 @@
 const TeleBot = require('../');
-const bot = new TeleBot('468529599:AAGcOzFesrDRJ9SJzvvs___qjJJxppbMcbc');
+const bot = new TeleBot('467846256:AAGriXuEPrEyYJ401mRV2Lb_8-Gqw7S04Ms');
 
 const mysql = require('mysql');
 var ids = [];
@@ -51,9 +51,10 @@ bot.on('text', function (message) {
 	    }	
 		});
 	}else if(Number.isInteger(parseInt(message.text[1]))){
-	var siguiente = "Next " + message.text[1] + " 0";
+	var y= message.text.split('/');
+	var siguiente = "Next " + y[1] + " 0";
 	let replyMarkup = bot.keyboard([[siguiente , "/Volver" ]], {resize: true});
-	bot.sendMessage(message.from.id,"Has elegido la encuesta "+message.text[1]+ ". Si desea continuar pulse el boton Next, si quiere volver atrás pulse /Volver.", {replyMarkup});
+	bot.sendMessage(message.from.id,"Has elegido la encuesta "+y[1]+ ". Si desea continuar pulse el boton Next, si quiere volver atrás pulse /Volver.", {replyMarkup});
 	
 	}
 	else if(n[0] == "Next"){
