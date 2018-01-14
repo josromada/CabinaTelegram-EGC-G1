@@ -1,0 +1,6 @@
+1- Entrar en el Fork.
+2- Pinchar en botón Compare.
+3- Pinchar en switching the base para cambiar la base y pasar de la pricipal al Fork los commit y no al revés (cuidadocon esto).
+4- Create pull request.
+5- Te vas a la pestaña de pull request y abajo del todo pincha en merge.
+6- Vete a code y comprueba que todo está actualizado.
